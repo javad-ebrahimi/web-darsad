@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    
+    <div class="heder">
+      <input placeholder="اختلاف و خارج تعهد" class="ekhtelaf-input">
+      <input placeholder=" % درصد"  class="darsad-input">
+      <input placeholder="مبلغ قابل پرداخت" class="total-input">
+      <div class="div-button">
+        <p class="fany-text">حق فنی<input type="checkbox" class="checkbox-input"></p>
+
+        <!--<button onclick="copy()" class="copy-button"></button>-->
+
+        <button class="button-total" onclick="total()">equals</button>
+      </div>
+    </div>
+    
+    <output class="output-moshtary"></output>
+    <output class="output-site"></output>
+    
+
+  </body>
+  <script>
+
+    document.addEventListener('contextmenu', event => event.preventDefault());
+
+    let site;
+     //فنی
+    const fany =336000
+
+    function total(){
+
+      //گرفتن اختلاف
+      const ek=document.querySelector('.ekhtelaf-input');
+      let ekhtelaf = ek.value;
+
+      //گرفتن درصد
+      const dr = document.querySelector('.darsad-input');
+      let darsad = dr.value;
+
+      // حساب کردن مبلغ مشتری
+      let moshtary = Number(ekhtelaf) * (Number(darsad)/100);
+
+      //گرفتن مبلغ کل
+      const tl = document.querySelector('.total-input');
+      let total = tl.value;
+
+      //حساب کردن مبلغ سایت
+      site = Number(total) - Number(moshtary);
+
+       //تشخیص حق فنی
+      const ck = document.querySelector('.checkbox-input');
+      let checkbox = ck.checked;
+      
+
+      //محاسبه فنی
+      if (checkbox==true){
+        site+=fany;
+        
+      }else{
+        moshtary+=fany;
+        
+      }
+
+      //نشان دادن مبلغ مشتری
+      document.querySelector('.output-moshtary').innerHTML = `moshtary = ${moshtary.toLocaleString('en-US')+ '  ریال' }`;
+
+      //نشان دادن مبلغ سایت
+      document.querySelector('.output-site').innerHTML = `site = ${site}`;
+     
+    }
+
+    /*function copy(){
+      navigator.clipboard.writeText(`${site}`);
+     
+      
+    }
+    */
+    
+    
+  </script>
+</html>
