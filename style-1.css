@@ -1,0 +1,71 @@
+.heder{
+    
+
+}
+
+.div-button{
+display: flex;
+  
+
+}
+.ekhtelaf-input,.darsad-input,.total-input,.azad-input{
+  display: block;
+  margin: 5px 5px;
+  border-radius: 15px;
+  border-color: black;
+  border-style: solid;
+  width: 240px;
+  height: 40px;
+  padding: 2px 5px;
+  font-size: 18px;
+}
+
+
+.checkbox-input{
+  transform: scale(2);
+  margin: 1px;
+  margin-left: 10px;
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+.fany-text{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.button-total{
+border-radius: 20px;
+border-style: none;
+width: 120px;
+height: 50px;
+background-color: aqua;
+font-size: 19px;
+font-weight: 500;
+cursor: pointer;
+margin-left:40px ;
+
+}
+.button-total:hover{
+  background-color: rgb(33, 215, 215);
+}
+
+.output-moshtary,.output-site{
+display: block;
+margin: 12px 5px ;
+font-size: 22px;
+}
+
+/*.copy-button{
+  border:none;
+  width: 15px;
+  height: 20px;
+  margin-top: 20px;
+  background-color: rgb(201, 248, 201);
+}*/
+
+.test{
+    color: red;
+    font-size: 24px;
+    margin-left: 80px;
+}
