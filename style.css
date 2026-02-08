@@ -3,7 +3,7 @@ body{
   display: flex;
   align-items :center;
   justify-content: center;
-  background: url(5.jpg) no-repeat;
+  background: url(6.jpg) no-repeat;
   background-size: cover;
   height: 100vh;
 
@@ -103,4 +103,5 @@ font-weight: 600;
   display: flex;
   justify-content: space-between;
 }
+
 
