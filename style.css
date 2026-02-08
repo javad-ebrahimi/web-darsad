@@ -1,11 +1,11 @@
 body{
 
   display: flex;
-  align-items :center;
+  
   justify-content: center;
   background: url(4.jpg) no-repeat;
   background-size: cover;
-  height: 100vh;
+  
 
 
 }
@@ -103,6 +103,7 @@ font-weight: 600;
   display: flex;
   justify-content: space-between;
 }
+
 
 
 
