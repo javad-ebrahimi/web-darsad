@@ -7,86 +7,11 @@
   <body>
 
     <p class="test"> درحال تست</p>
-    <div class="heder">
-      <input placeholder="اختلاف و خارج تعهد" class="ekhtelaf-input" >
-      <input placeholder=" % درصد"  class="darsad-input">
-      <input placeholder="مبلغ قابل پرداخت" class="total-input">
-      <input placeholder="جمع اقلام آزاد" class="azad-input" >
-      <div class="div-button">
-        <p class="fany-text">حق فنی<input type="checkbox" class="checkbox-input"></p>
-
-        <!--<button onclick="copy()" class="copy-button"></button>-->
-
-        <button class="button-total" onclick="total()">equals</button>
-      </div>
-    </div>
     
-    <output class="output-moshtary"></output>
-    <output class="output-site"></output>
-    
-
-  </body>
-  <script>
-
-    document.addEventListener('contextmenu', event => event.preventDefault());
-
-    let site;
-    let azad=0;
-     //فنی
-    const fany =336000
-
-    function total(){
-
-      //گرفتن اختلاف
-      const ek=document.querySelector('.ekhtelaf-input');
-      let ekhtelaf = ek.value;
-
-      //گرفتن درصد
-      const dr = document.querySelector('.darsad-input');
-      let darsad = dr.value;
-
-        //گرفتن مبلغ آزاد
-        const az = document.querySelector('.azad-input');
-        azad = az.value;
-
-      // حساب کردن مبلغ مشتری
-      let moshtary = ((Number(ekhtelaf)-Number(azad)) * (Number(darsad)/100)) + Number(azad);
-
-      //گرفتن مبلغ قابل پرداخت
-      const tl = document.querySelector('.total-input');
-      let total = tl.value;
-
-    
-       //تشخیص حق فنی
-      const ck = document.querySelector('.checkbox-input');
-      let checkbox = ck.checked;
       
-
-      //محاسبه فنی
-      if (checkbox==false){
-        moshtary+=fany;
-      }
-
-       //حساب کردن مبلغ سایت
-      site = Number(total) - Number(moshtary);
-
-
-      //نشان دادن مبلغ مشتری
-      document.querySelector('.output-moshtary').innerHTML = `moshtary = ${moshtary.toLocaleString('en-US')+ '  ریال' }`;
-
-      //نشان دادن مبلغ سایت
-      document.querySelector('.output-site').innerHTML = `site = ${site}`;
-     
-    }
-
-    /*function copy(){
-      navigator.clipboard.writeText(`${site}`);
-     
-      
-    }
-    */
-    
+  <\body>
     
   </script>
 
 </html>
+
